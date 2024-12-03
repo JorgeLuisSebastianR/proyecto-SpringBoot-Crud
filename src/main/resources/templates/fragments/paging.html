@@ -1,0 +1,5 @@
+<a th:fragment="paging(PageNum, label, tooltip)" class="page-link"
+    th:href="@{'/cursos?' + ${keyword != null && keyword != '' ? 'keyword=' +keyword+ '&'  : ''}+ 'page=' + ${PageNum} +'&size='+${pageSize} }"
+    th:title="${tooltip}" rel="tooltip">
+    [[${label}]]
+</a>
